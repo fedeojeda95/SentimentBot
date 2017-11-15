@@ -1,8 +1,9 @@
-const constants = require('./Constants');
+require('dotenv').config()
+
 const Slackbot = require('./Slackbot');
 const HttpService = require('./HttpService');
 
-const slackbot = new Slackbot(constants.SLACK_API_KEY);
+const slackbot = new Slackbot(process.env.SLACK_API_KEY);
 
 slackbot
   .onMessage()
