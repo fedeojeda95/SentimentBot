@@ -4,7 +4,8 @@
   "description": "Testing slack bots and the google natural language api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/fedeojeda95/SentimentBot/issues"
   },
-  "homepage": "https://github.com/fedeojeda95/SentimentBot#readme"
+  "homepage": "https://github.com/fedeojeda95/SentimentBot#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "@reactivex/rxjs": "^5.4.3",
+    "@slack/client": "^3.14.1"
+  }
 }
