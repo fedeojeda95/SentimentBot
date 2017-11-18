@@ -22,5 +22,8 @@
     "@reactivex/rxjs": "^5.4.3",
     "@slack/client": "^3.14.1",
     "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.2"
   }
 }

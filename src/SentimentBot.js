@@ -28,7 +28,7 @@ class SentimentBot {
         return {
           channel: message.channel,
           sentiment,
-        }
+        };
       });
   }
 
@@ -37,8 +37,8 @@ class SentimentBot {
     return {
       channel: response.channel,
       message,
-    }
-  };
+    };
+  }
 
 }
 
