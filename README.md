@@ -29,12 +29,11 @@ This will start the bot in the current console
 Every critical information is provided as an enviroment variable.
 
 **Slack:**
-Since the slackbot needs a slack api key to work, this must be provided. The project assumes it's set
-as an enviroment variable. This can be obtained in the Slack developer console when adding a bot integration. For further information, please refer to the [docs](https://api.slack.com/getting-started)
+Since the slackbot needs a slack api key to work, one must be provided to the sdk. The project assumes it's set as an enviroment variable. This can be obtained in the Slack developer console when adding a bot integration. For further information, please refer to the [docs](https://api.slack.com/getting-started)
 
 **Google Cloud Natural Language API:**
 In order to authenticate with Google, a Service Account must be used. This type of authentication uses
-a simple json file with the necessary information. Google's SDK used automatically reads an enviroment variable that indicates where this file is located. For further information, please refer to the [docs](https://cloud.google.com/docs/authentication/getting-started?hl=es-419#auth-cloud-implicit-nodejs)
+a simple json file with the necessary information. Google's SDK automatically reads an enviroment variable that indicates where this file is located. For further information, please refer to the [docs](https://cloud.google.com/docs/authentication/getting-started?hl=es-419#auth-cloud-implicit-nodejs)
 
 #### Configuration file 
 
@@ -49,3 +48,14 @@ a simple json file with the necessary information. Google's SDK used automatical
 
 ## Deployment
 
+Since the Google Cloud SDK requires to have the json file present when the application is running, and this file contains sensitive information that should not be hosted in github, the deployment process is quite messy.
+
+Heroku is recommended platform for deployment due to its ease of use. The process is the following
+
+* Create a branch from `master` called `deployment`
+* In this branch, remove the `.json` config file from the .gitignore
+* Commit this change, and afterwards perform a deployment from this branch (`git push heroku deployment:master`)
+
+**Important** : _Never_, _Ever_, push the `deployment` branch to the remote repository.
+
+This process can be easily automated with a build script. It may be done afterwards. 

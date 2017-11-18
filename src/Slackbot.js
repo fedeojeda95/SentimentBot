@@ -1,5 +1,5 @@
-var RtmClient = require('@slack/client').RtmClient;
-var REAL_TIME_EVENTS = require('@slack/client').RTM_EVENTS;
+const RtmClient = require('@slack/client').RtmClient;
+const REAL_TIME_EVENTS = require('@slack/client').RTM_EVENTS;
 const { Observable } = require('@reactivex/rxjs');
 
 class SlackBot {
