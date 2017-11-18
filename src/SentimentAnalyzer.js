@@ -11,7 +11,7 @@ class SentimentAnalyzer {
   analyzeSentiment(text) {
     const document = this.createDocument(text);
     const analyzeSentimentPromise = this.client
-      .analyzeSentiment({document: document})
+      .analyzeSentiment({document: document});
 
     return Observable.fromPromise(analyzeSentimentPromise)
       .map(sentiment => this.parseSentiment(sentiment));
@@ -21,7 +21,7 @@ class SentimentAnalyzer {
     return {
       content: text,
       type: Constants.DOCUMENT_TYPE,
-    }
+    };
   }
 
   parseSentiment(sentiment) {

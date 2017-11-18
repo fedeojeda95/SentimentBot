@@ -5,4 +5,4 @@ module.exports = {
     NEGATIVE: ':-1:',
   },
   NEUTRAL_SCORE: 0,
-}
+};
