@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/fedeojeda95/SentimentBot#readme",
   "dependencies": {
+    "@google-cloud/language": "^1.1.0",
     "@reactivex/rxjs": "^5.4.3",
     "@slack/client": "^3.14.1",
-    "axios": "^0.16.2",
     "dotenv": "^4.0.0"
   }
 }
